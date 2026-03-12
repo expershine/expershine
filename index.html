@@ -14,7 +14,7 @@ background:#ffffff;
 header{
 background:#d4af37;
 color:white;
-padding:50px 20px;
+padding:40px 20px;
 display:flex;
 flex-direction:column;
 align-items:center;
@@ -30,22 +30,23 @@ display:none;
 }
 header h1{
 margin:0;
-font-size:42px;
+font-size:36px;
 font-weight:bold;
 text-align:center;
 }
 header .values{
-margin-top:15px;
-font-size:18px;
+margin-top:12px;
+font-size:16px;
 text-align:center;
 color:white;
 }
 nav{
 background:#ffffff;
-padding:15px 0;
+padding:12px 0;
 display:flex;
 justify-content:center;
-gap:40px;
+flex-wrap:wrap;
+gap:15px;
 box-shadow:0 2px 6px rgba(0,0,0,0.1);
 position:relative;
 z-index:10;
@@ -54,7 +55,7 @@ nav a{
 color:#003b6f;
 text-decoration:none;
 font-weight:bold;
-font-size:18px;
+font-size:16px;
 cursor:pointer;
 }
 nav a:hover{
@@ -62,8 +63,8 @@ text-decoration:underline;
 }
 .container{
 max-width:900px;
-margin:40px auto;
-padding:30px;
+margin:20px auto;
+padding:20px;
 background:#ffffff;
 border-radius:10px;
 box-shadow:0 4px 10px rgba(0,0,0,0.15);
@@ -77,23 +78,30 @@ display:block;
 h2{
 color:#b8961e;
 margin-top:0;
+font-size:24px;
+text-align:center;
 }
 .service-grid{
 display:flex;
 flex-wrap:wrap;
-gap:20px;
+gap:15px;
 justify-content:center;
 }
 .service-box{
-flex:1 1 40%;
+flex:1 1 100%;
 background:#ffffff;
 border-radius:8px;
-padding:20px;
+padding:15px;
 box-shadow:0 2px 6px rgba(0,0,0,0.1);
 text-align:center;
 }
+@media(min-width:600px){
+.service-box{
+flex:1 1 40%;
+}
 .service-box.full-width{
 flex-basis:90%;
+}
 }
 .service-box strong{
 color:#b8961e;
@@ -113,6 +121,7 @@ padding:10px;
 margin-top:10px;
 border-radius:5px;
 border:1px solid #ccc;
+box-sizing:border-box;
 }
 button{
 margin-top:12px;
@@ -122,6 +131,8 @@ background:#d4af37;
 color:white;
 border-radius:5px;
 cursor:pointer;
+width:100%;
+max-width:250px;
 }
 button:hover{
 background:#b8961e;
@@ -131,7 +142,8 @@ background:#003b6f;
 color:white;
 text-align:center;
 padding:20px;
-margin-top:40px;
+margin-top:20px;
+font-size:14px;
 }
 </style>
 </head>
