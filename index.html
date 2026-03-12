@@ -19,25 +19,23 @@ display:flex;
 flex-direction:column;
 align-items:center;
 position:relative;
+text-align:center;
 }
 header img{
-position:absolute;
-top:0;
-left:0;
-height:100%;
-width:auto;
-display:none;
+max-width:120px;
+height:auto;
+display:none; /* shown only on GitHub Pages */
+margin-bottom:10px;
 }
 header h1{
 margin:0;
 font-size:36px;
 font-weight:bold;
-text-align:center;
+line-height:1.2;
 }
 header .values{
 margin-top:12px;
 font-size:16px;
-text-align:center;
 color:white;
 }
 nav{
@@ -144,6 +142,27 @@ text-align:center;
 padding:20px;
 margin-top:20px;
 font-size:14px;
+}
+
+/* RESPONSIVE HEADER */
+@media(max-width:480px){
+header{
+padding:20px 10px;
+}
+header h1{
+font-size:28px;
+}
+header .values{
+font-size:14px;
+}
+header img{
+max-width:80px;
+margin-bottom:8px;
+}
+nav a{
+font-size:14px;
+padding:6px 8px;
+}
 }
 </style>
 </head>
