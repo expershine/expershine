@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expershine Consulting</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #ffffff;
+  position: relative;
+}
+
+/* HEADER */
+header {
+  background: #d4af37;
+  text-align: center;
+  padding: 60px 15px 120px 15px;
+  color: white;
+  position: relative;
+}
+
+/* WHITE LOGO BLOCK */
+.logo-block {
+  display: inline-block;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin-bottom: 15px;
+}
+
+header img {
+  width: 180px;
+  display: block;
+  margin: auto;
+}
+
+header p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* TRAINING GALLERY BUTTON */
+#training-button {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  background: #ffffff;
+  color: #d4af37;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow:0 2px 6px rgba(0,0,0,0.3);
+  z-index: 10;
+}
+
+/* NAVIGATION */
+nav {
+  background: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+nav a {
+  color: #003b6f;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* SECTIONS */
+section {
+  display: none;
+}
+section.active {
+  display: block;
+}
+h2 {
+  color: #b8961e;
+}
+
+/* SERVICES */
+.service-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.service-box {
+  flex: 1 1 250px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.service-box strong {
+  color: #b8961e;
+}
+.descriptor {
+  color: #003b6f;
+}
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+.gallery img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* FORMS */
+input,textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+button {
+  margin-top: 10px;
+  padding: 10px 18px;
+  border: none;
+  background: #d4af37;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  background: #003b6f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:480px){
+  header {
+    padding: 60px 10px 120px 10px;
+  }
+  header img {
+    width: 140px;
+  }
+  header p {
+    font-size: 14px;
+  }
+  nav a {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+  .gallery img {
+    max-width: 100%;
+  }
+  #training-button {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo-block">
+    <img src="expershine_sun_logo.png" alt="Expershine Logo">
+  </div>
+  <p>Expertise ☀ Clarity ☀ Impact</p>
+  <div id="training-button" onclick="openTraining()">Training Gallery</div>
+</header>
+
+<nav>
+  <a onclick="openTab('about')">About Us</a>
+  <a onclick="openTab('services')">Our Services</a>
+  <a onclick="openTab('work')">Work With Us</a>
+  <a onclick="openTab('contact')">Contact Us</a>
+  <a onclick="openTab('careers')">Careers</a>
+</nav>
+
+<div class="container">
+
+<section id="about">
+<h2>About Us</h2>
+<p class="descriptor">
+Expershine Consulting provides advisory and consulting services in business development,
+financial literacy, and digital transformation support for entrepreneurs,
+businesses and organizations.
+</p>
+</section>
+
+<section id="services">
+<h2>Our Services</h2>
+<div class="service-grid">
+  <div class="service-box">
+    <strong>Financial Literacy Training</strong>
+    <p class="descriptor">
+    Training for MSMEs and youth entrepreneurs covering budgeting,
+    record keeping and financial decision making.
+    </p>
+  </div>
+  <div class="service-box">
+    <strong>Digital Business Solutions</strong>
+    <p class="descriptor">
+    Helping entrepreneurs adopt digital tools,
+    online platforms and e-commerce systems.
+    </p>
+  </div>
+  <div class="service-box">
+    <strong>Entrepreneurship Program Support</strong>
+    <p class="descriptor">
+    Advisory support for entrepreneurship programs,
+    startup mentorship and business incubation.
+    </p>
+  </div>
+</div>
+</section>
+
+<section id="work">
+<h2>Work With Us</h2>
+<p class="descriptor">
+Fill the form below for business advisory consultations or partnership requests.
+</p>
+<form action="https://formspree.io/f/mnjgdegn" method="POST">
+<input type="text" name="Name" placeholder="Full Name" required>
+<input type="email" name="Email" placeholder="Email Address" required>
+<textarea name="Message" placeholder="Describe your request"></textarea>
+<button type="submit">Submit</button>
+</form>
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+<p class="descriptor"><strong>Email:</strong> expershine@gmail.com</p>
+<p class="descriptor"><strong>Phone:</strong> +254 748 027 219</p>
+<form action="https://formspree.io/f/mnjgdegn" method="POST">
+<input type="text" name="Name" placeholder="Your Name">
+<input type="email" name="Email" placeholder="Your Email">
+<textarea name="Message" placeholder="Write message"></textarea>
+<button type="submit">Send</button>
+</form>
+</section>
+
+<section id="careers">
+<h2>Careers</h2>
+<p class="descriptor">
+Currently, we do not have open positions available. However, if you are passionate
+about empowering businesses, enhancing financial literacy, and supporting digital
+transformation, please reach out via our 
+<a href="#contact" onclick="openTab('contact')">contact form</a>.
+</p>
+</section>
+
+<section id="training">
+<h2>Training Gallery</h2>
+<p class="descriptor">
+Highlights from our financial literacy and entrepreneurship training sessions.
+</p>
+<div class="gallery">
+  <img src="training1_expershine.jpg" alt="Training 1">
+  <img src="training2_expershine.jpg" alt="Training 2">
+  <img src="training3_expershine.jpg" alt="Training 3">
+  <img src="training4_expershine.jpg" alt="Training 4">
+</div>
+</section>
+
+</div>
+
+<footer>
+© 2026 Expershine Consulting
+</footer>
+
+<script>
+function openTab(tab){
+  document.querySelectorAll('section').forEach(section => section.classList.remove('active'));
+  document.getElementById(tab).classList.add('active');
+}
+
+function openTraining(){
+  document.querySelectorAll('section').forEach(section => section.classList.remove('active'));
+  document.getElementById('training').classList.add('active');
+}
+
+// Collapse menu when clicking outside
+document.addEventListener('click', function(event){
+  const container = document.querySelector('.container');
+  const nav = document.querySelector('nav');
+  const trainingButton = document.getElementById('training-button');
+  if(!container.contains(event.target) && !nav.contains(event.target) && event.target !== trainingButton){
+    document.querySelectorAll('section').forEach(section => section.classList.remove('active'));
+  }
+});
+</script>
+
+</body>
+</html>
